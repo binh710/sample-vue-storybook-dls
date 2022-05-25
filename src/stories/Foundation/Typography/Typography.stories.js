@@ -1,4 +1,8 @@
 import Typography from './Typography.vue';
+import { previewTemplate, DEFAULT_VUE_CODESANDBOX } from 'storybook-addon-preview';
+
+import scsspreview from '!!raw-loader!./typography.scss';
+import vuepreview from '!!raw-loader!./Typography.vue';
 
 export default {
   title: 'Foundation/Typography',
@@ -12,6 +16,21 @@ export default {
       control: { type: 'select' },
       options: ['light', 'regular', 'bold'],
     },
+  },
+  parameters: {
+    preview: [
+      {
+        tab: 'typography.scss',
+        template: previewTemplate`${scsspreview}`,
+        language: 'css',
+        copy: true,
+      },
+      {
+        tab: 'Typography.vue',
+        template: previewTemplate`${vuepreview}`,
+        codesandbox: DEFAULT_VUE_CODESANDBOX(['@egjs/react-infinitegrid']),
+      },
+    ],
   },
 };
 
