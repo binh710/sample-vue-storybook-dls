@@ -1,5 +1,5 @@
 <template>
-  <div class="lato-text" :class="[activeClass, errorClass]">
+  <div class="lato-text" :class="[typeClass, weightClass]">
     Lato {{type ? type.replaceAll('-', ' ') : ''}}
   </div>
 </template>
@@ -8,7 +8,7 @@
 import './typography.scss';
 
 export default {
-  name: 'typography',
+  name: 'lato-text-block',
 
   props: {
     type: {
@@ -23,8 +23,8 @@ export default {
 
   data() {
     return {
-      activeClass: `lato-text--${this.type}`,
-      errorClass: `lato-text--${this.type}_${this.weight}`
+      typeClass: `lato-text--${this.type}`,
+      weightClass: `lato-text--${this.type}_${this.weight}`
     }
   }
 }

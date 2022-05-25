@@ -20,7 +20,7 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: '<typography v-bind="args" />',
+  template: '<Typography v-bind="args" />',
 });
 
 export const LatoTitle = Template.bind({});
