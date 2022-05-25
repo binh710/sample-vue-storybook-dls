@@ -60,8 +60,31 @@
 
   .sbdocs-div {
     color: foundation.$charcole-grey;
+    font-family: 'Lato', sans-serif;
     &.guideline-container, &.color-block-wrapper {
       margin-bottom: 80px;
+    }
+
+    &.lato-text--title-1 {
+      @extend .lato-text--title-1;
+    }
+    &.lato-text--title-2 {
+      @extend .lato-text--title-2;
+    }
+    &.lato-text--title-3 {
+      @extend .lato-text--title-3;
+    }
+    &.lato-text--title-4 {
+      @extend .lato-text--title-4;
+    }
+    &.lato-text--paragraph-1 {
+      @extend .lato-text--paragraph-1;
+    }
+    &.lato-text--paragraph-2 {
+      @extend .lato-text--paragraph-2;
+    }
+    &.lato-text--caption {
+      @extend .lato-text--caption;
     }
   }
 
