@@ -1,9 +1,11 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
 
 import colourDo from './assets/colour-do.png';
 import colourDont from './assets/colour-dont.png';
 
 import '../../Shared/Styling/sb-docs.scss';
+
+import ColourBlock from './ColourBlock';
 
 <Meta title="Foundation/Colour/Overview" />
 
@@ -13,27 +15,27 @@ Colour themes are designed to be harmonious, and accessible UI elements. Maintai
 
 ## Guidelines
 
-<div className="guideline-container">
-  <div className="guideline-block">
-    <div className="guideline-block--do">
-      <div className="guideline-block--image">
+<div class="guideline-container">
+  <div class="guideline-block">
+    <div class="guideline-block--do">
+      <div class="guideline-block--image">
         <img src={colourDo} alt="colourDo" />
       </div>
       <div>
-        <div className="guideline-block--bar"></div>
-        <p className="guideline-block--title">Do</p>
+        <div class="guideline-block--bar"></div>
+        <p class="guideline-block--title">Do</p>
         <p>Only use the colours defined here</p>
       </div>
     </div>
   </div>
-  <div className="guideline-block">
-    <div className="guideline-block--dont">
-      <div className="guideline-block--image">
+  <div class="guideline-block">
+    <div class="guideline-block--dont">
+      <div class="guideline-block--image">
         <img src={colourDont} alt="colourDont" />
       </div>
       <div>
-        <div className="guideline-block--bar"></div>
-        <p className="guideline-block--title">Don't</p>
+        <div class="guideline-block--bar"></div>
+        <p class="guideline-block--title">Don't</p>
         <p>Don't use the colours that doesn't meet color contrast standard</p>
       </div>
     </div>
@@ -44,9 +46,22 @@ Colour themes are designed to be harmonious, and accessible UI elements. Maintai
 
 A primary color is the color displayed most frequently across your app's screens and components.
 
-
+<ColorPalette>
+  <ColorItem
+    title="Green"
+    subtitle="Neque porro quisquam est qui."
+    colors={['#539877', '#68F8B4', '#73F9BC', '#7BF9C0', '#BFFFE1']}
+  />
+</ColorPalette>
 
 ## Neutral colours
 
 A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI.
 
+<ColorPalette>
+  <ColorItem
+    title="Gray"
+    subtitle="Dolorem ipsum quia dolor"
+    colors={['#000000', '#171616', '#252525', '#171616', '#ffffff']}
+  />
+</ColorPalette>
